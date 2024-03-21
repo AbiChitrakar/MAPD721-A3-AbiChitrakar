@@ -3,44 +3,35 @@ package com.example.mapd721_a3_abichitrakar
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.mapd721_a3_abichitrakar.ui.theme.MAPD721A3AbiChitrakarTheme
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.compose.composable
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MAPD721A3AbiChitrakarTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
+            val navController = rememberNavController()
+            NavHost(navController, startDestination = "animationSelectionScreen") {
+                composable("animationSelectionScreen") {
+                    AnimationSelectionScreen(navController = navController)
                 }
+                composable("transitionScreen") {
+                    TransitionAnimationScreen(navController = navController)
+                }
+                composable("scaleScreen") {
+                    ScaleAnimationScreen(navController= navController)
+                }
+                composable("infiniteScreen") {
+                    InfiniteAnimationScreen(navController= navController)
+                }
+                composable("exitScreen") {
+                    EnterExitAnimationScreen(navController= navController)
+                }
+
+
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MAPD721A3AbiChitrakarTheme {
-        Greeting("Android")
     }
 }

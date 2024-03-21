@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/animationSelectionScreen">
+
+        <!-- Define the first screen -->
+        <fragment
+            android:id="@+id/animationSelectionScreen"
+            android:name="com.example.mapd721_a3_abichitrakar.AnimationSelectionScreenKt"
+            android:label="Animation Selection Screen">
+        </fragment>
+
+        <!-- Define other screens -->
+        <fragment
+            android:id="@+id/transitionScreen"
+            android:name="com.example.mapd721_a3_abichitrakar.TransitionAnimationScreenKt"
+            android:label="Transition Animation" />
+
+        <fragment
+            android:id="@+id/scaleScreen"
+            android:name="com.example.mapd721_a3_abichitrakar.ScaleAnimationScreenKt"
+            android:label="Scale Animation" />
+
+        <fragment
+            android:id="@+id/infiniteScreen"
+            android:name="com.example.mapd721_a3_abichitrakar.InfiniteAnimationScreenKt"
+            android:label="Infinite Animation" />
+
+        <fragment
+            android:id="@+id/exitScreen"
+            android:name="com.example.mapd721_a3_abichitrakar.EnterExitAnimationScreenKt"
+            android:label="Enter Exit Animation" />
+
+</navigation>
