@@ -27,7 +27,7 @@ fun TransitionAnimationScreen(navController: NavController) {
     ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth() // Fill entire width
+                .fillMaxWidth()
                 .background(color = Color(0xFFA064C9)), // Purple color
             verticalAlignment = Alignment.CenterVertically,
         ) {
@@ -36,7 +36,7 @@ fun TransitionAnimationScreen(navController: NavController) {
                     Icons.Default.ArrowBack,
                     contentDescription = "Back",
                     tint = Color.White
-                ) // White color
+                )
             }
 
             Text(

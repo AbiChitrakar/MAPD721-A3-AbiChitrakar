@@ -24,10 +24,9 @@ fun ScaleAnimationScreen(navController: NavController) {
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Top
     ) {
-        // Custom toolbar with purple background
         Row(
             modifier = Modifier
-                .fillMaxWidth() // Fill entire width
+                .fillMaxWidth()
                 .background(color = Color(0xFFA064C9)), // Purple color
             verticalAlignment = Alignment.CenterVertically,
         ) {
@@ -36,7 +35,6 @@ fun ScaleAnimationScreen(navController: NavController) {
                 Icon(Icons.Default.ArrowBack, contentDescription = "Back", tint = Color.White) // White color
             }
 
-            // Title with white color
             Text(
                 text = "ScaleAnimation",
                 style = MaterialTheme.typography.bodySmall.copy(color = Color.White), // White color
@@ -44,7 +42,6 @@ fun ScaleAnimationScreen(navController: NavController) {
 
             )
 
-            // Placeholder to align back button and title
             Spacer(modifier = Modifier.width(48.dp))
         }
 
